@@ -3,4 +3,52 @@ body,
 #root {
     height: 100%;
     margin: 0;
+
+    .flex-container {
+        width: 700px;
+        height: 300px;
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+    }
+
+    .flex-container > div {
+        width: 100px;
+        height: 100px;
+        background-color: #daa520;
+        border-radius: 50%;
+        position: absolute;
+    }
+
+    .flex-container > div:nth-child(1),
+    .flex-container > div:nth-child(5) {
+        top: 0;
+    }
+
+    .flex-container > div:nth-child(2),
+    .flex-container > div:nth-child(4) {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .flex-container > div:nth-child(3) {
+        bottom: 0;
+    }
+
+    .flex-container > div:nth-child(1) {
+        left: 5%;
+    }
+    .flex-container > div:nth-child(2) {
+        left: 25%;
+    }
+    .flex-container > div:nth-child(3) {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .flex-container > div:nth-child(4) {
+        right: 25%;
+    }
+    .flex-container > div:nth-child(5) {
+        right: 5%;
+    }
 }
